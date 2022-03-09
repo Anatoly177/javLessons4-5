@@ -7,18 +7,18 @@ import java.io.InputStreamReader;
 public class Task5 {
 
     public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int sum = 0;
         for (; true; )
         {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            int number = Integer.parseInt(reader.readLine());
-            String text = reader.readLine();
-            if (!text.equals("Сумма")) {
-                sum += number;
-            }
-            else if (text.equals("Сумма"))
+            String input = reader.readLine();
+            if (input.equals("Сумма")) {
+                System.out.println(sum);
                 break;
+            } else {
+                sum += Integer.parseInt(input);
+            }
+
         }
-        System.out.println(sum);
     }
 }
