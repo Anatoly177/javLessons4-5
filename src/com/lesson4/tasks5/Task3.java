@@ -12,9 +12,8 @@ public class Task3 {
         {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             int number = Integer.parseInt(reader.readLine());
-            String text = reader.readLine();
             sum += number;
-            if (text.equals("Сумма"))
+            if (number == -1)
                 break;
         }
         System.out.println(sum);
